@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 streamlit
 sentence-transformers
 pandas
 numpy
 scikit-learn
-=======
-streamlit
-sentence-transformers
-pandas
-numpy
-scikit-learn
->>>>>>> 80046025911e1ef54c6b9164ee24329ca9394612
 plotly
