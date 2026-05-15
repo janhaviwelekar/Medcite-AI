@@ -257,6 +257,3 @@ JANHAVI WELEKAR- SHRI RAMDEOBABA COLLEGE OF ENGINEERING & MANAGEMENT
 
 ---
 
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
