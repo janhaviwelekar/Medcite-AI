@@ -1,12 +1,12 @@
 import streamlit as st
-from modules.aeo_analysis import calculate_aeo_score
-from modules.geo_analysis import calculate_geo_score
-from modules.citation_score import calculate_citation_probability
-from modules.semantic_analysis import semantic_clarity
-from modules.hallucination_detector import detect_hallucinations
-from modules.medical_ner import extract_medical_entities
-from modules.summarizer import generate_summary
-from modules.visualization import (
+from aeo_analysis import calculate_aeo_score
+from geo_analysis import calculate_geo_score
+from citation_score import calculate_citation_probability
+from semantic_analysis import semantic_clarity
+from hallucination_detector import detect_hallucinations
+from medical_ner import extract_medical_entities
+from summarizer import generate_summary
+from visualization import (
     plot_score_gauge,
     plot_entity_chart,
     plot_heatmap
@@ -65,6 +65,7 @@ if content:
     st.subheader("📌 Medical Entity Coverage")
 
     entities = extract_medical_entities(content)
+
     st.write(entities)
 
     plot_entity_chart(entities)
@@ -75,8 +76,11 @@ if content:
 
     hallucinations = detect_hallucinations(content)
 
-    for item in hallucinations:
-        st.warning(item)
+    if hallucinations:
+        for item in hallucinations:
+            st.warning(item)
+    else:
+        st.success("No major hallucination risk phrases detected.")
 
     st.divider()
 
@@ -95,6 +99,14 @@ if content:
     summary = generate_summary(content)
 
     st.info(summary)
+
+    st.divider()
+
+    st.subheader("📊 AI Score Gauges")
+
+    plot_score_gauge("AEO Score", aeo_score)
+    plot_score_gauge("GEO Score", geo_score)
+    plot_score_gauge("Citation Probability", citation_prob)
 
     st.divider()
 
