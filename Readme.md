@@ -110,7 +110,6 @@ MedCite-AI/
 │
 ├── sample_data/
 │   ├── sample_abstract.txt
-│   └── clinical_trial.txt
 │
 ├── modules/
 │   ├── aeo_analysis.py
@@ -123,9 +122,7 @@ MedCite-AI/
 │   └── visualization.py
 │
 ├── utils/
-│   ├── text_cleaner.py
-│   ├── chunking.py
-│   └── helpers.py
+│   ├──preprocessing.py
 │
 └── styles/
     └── custom_css.py
@@ -185,9 +182,9 @@ and reduced recurrence rates. Further clinical validation is required.
 
 
 ```
-Medical AEO Score          : 84%
-GEO Score                  : 88%
-AI Citation Probability    : 81%
+Medical AEO Score          : 60%
+GEO Score                  : 36%
+AI Citation Probability    : 70%
 
 Detected Entities:
   - Lung Cancer
