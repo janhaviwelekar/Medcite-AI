@@ -181,6 +181,8 @@ and reduced recurrence rates. Further clinical validation is required.
 ```
 
 ### Output
+<img width="1869" height="864" alt="image" src="https://github.com/user-attachments/assets/17b66b9e-4256-4fd2-8dca-c14828c597af" />
+
 
 ```
 Medical AEO Score          : 84%
